@@ -10,17 +10,17 @@ network:
   endpoint: 'wss://polkadot.api.onfinality.io/public-ws'
 dataSources:
   - kind: substrate/Runtime
-    startBlock: 7000000
+    startBlock: 6000000
     mapping:
       file: ./dist/index.js
       handlers:
-        - handler: handleSumRewarded
+        - handler: handleSumReward
           kind: substrate/EventHandler
           filter:
             module: staking
-            method: Rewarded
-        - handler: handleStakingRewarded
+            method: Reward
+        - handler: handleStakingReward
           kind: substrate/EventHandler
           filter:
             module: staking
-            method: Rewarded
+            method: Reward

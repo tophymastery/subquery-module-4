@@ -8,7 +8,7 @@ function createSumReward(accountId: string): SumReward {
     return entity;
 }
 
-export async function handleSumRewarded(event: SubstrateEvent): Promise<void> {
+export async function handleSumReward(event: SubstrateEvent): Promise<void> {
     const {
         event: {
             data: [account, newReward]
@@ -26,7 +26,7 @@ export async function handleSumRewarded(event: SubstrateEvent): Promise<void> {
     await entity.save();
 }
 
-export async function handleStakingRewarded(event: SubstrateEvent): Promise<void> {
+export async function handleStakingReward(event: SubstrateEvent): Promise<void> {
     const {
         event: {
             data: [account, newReward]
